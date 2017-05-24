@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>   <!-- 直接输出 &nbsp; -->
+    <h1><%- title %></h1>   <!-- 转义了特殊字符 &nbsp; -->
+	
+	<%- include a %>
+
+    <p>Welcome to <%= title %></p>
+
+    <%- include b %>
+
+	<ul>
+	<% for(var i=0; i<supplies.length; i++) {%>
+	   <li><%= supplies[i] %></li>
+	<% } %>
+	</ul>
+
+  </body>
+</html>

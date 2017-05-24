@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>网上约车系统-教练信息</title>
+<link rel="stylesheet" type="text/css" href="/Order/Public/Css/style.css">
+</head>
+<body>
+    <div class="middle_info">
+      <table class="t_info" cellpadding="0" cellspacing="0">
+      <foreach name="teacher" item="t">
+      	 <tr>
+      	 	<td align="right" width="30%"><b>教练名称：</b></td><td align="left" style="padding-left:10px;" width="30%">{$t.true_name}</td>
+          <td rowspan="4" width="40%" align="center"><img src="/Uploads/{$t.photo}" width="100px" height="120px"></td>
+      	 </tr>
+         <tr>
+         	<td align="right"><b>性  别：</b></td><td align="left" style="padding-left:10px;">{$t.sex}</td>
+         </tr>
+         <tr>
+         	<td align="right"><b>科 目：</b></td><td align="left" style="padding-left:10px;">{$t.kemu}</td>
+         </tr>
+         <tr>
+          <td align="right"><b>车牌号码：</b></td><td align="left" style="padding-left:10px;">{$t.carnum}</td>
+         </tr>
+          <if condition="$moble_zt eq 2 ">
+          <tr>
+          <td align="right"><b>教练手机：</b></td><td align="left" style="padding-left:10px;" colspan="2">{$t.moble}</td>
+          </tr>
+         </if>
+         <tr>
+         	<td align="right"><b>注册时间：</b></td><td align="left" style="padding-left:10px;" colspan="2">{$t.addtime}</td>
+         </tr>
+         <tr>
+           <td colspan="3" align="center"><h3>教练简介</h3></td>
+         </tr>
+         <tr>
+           <td colspan="3" align="left">{$t.jianjie}</td>
+         </tr>
+         </foreach>
+      </table>
+    </div>
+   
+</body>
+</html>

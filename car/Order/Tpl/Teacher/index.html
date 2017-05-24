@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>网上约车系统-教练信息管理</title>
+<link rel="stylesheet" type="text/css" href="/Order/Public/Css/style.css">
+<script type="text/javascript" src="/Order/Public/Js/jquery.js"></script>
+<script type="text/javascript" src="/Order/Public/Js/daohang.js"></script>
+<script language="javascript" type="text/javascript" src="/order/public/rili/WdatePicker.js"></script>
+<script type="text/javascript" charset="utf-8">
+function check(){
+	return confirm("确认删除记录？");
+}
+</script>
+</head>
+<body>
+    <div class="middle">
+    <div class="position"><span>你现在的位置：教练加班设置</span></div>
+    <div class="add" style="margin-top:70px;">
+    <foreach name="tctime" item="t">
+    <form action="/index.php/Teacher" method="post">
+    <table cellspacing="0" cellpadding="0" >
+        <tr>
+            <td align="right">加班时间：</td>
+            <td colspan="2"><input class="Wdate" type="text" onClick="WdatePicker()" name="time_jia" ></td>
+        </tr>
+        <tr>
+            <td align="right">加班时段：</td>
+            <td>6:00-7:00
+<input type="checkbox" name="time_1" value="{$t.0}"></td>
+            <td>7:00-8:00
+<input type="checkbox" name="time_2" value="{$t.1}"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>18：00-19:00 
+<input type="checkbox" name="time_3" value="{$t.11}"></td>
+            <td>19：00-20:00 
+<input type="checkbox" name="time_4" value="{$t.12}"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>20：00-21:00 
+<input type="checkbox" name="time_5" value="{$t.13}"></td>
+            <td>21：00-22:00 
+<input type="checkbox" name="time_6" value="{$t.14}"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>22：00-23:00 
+        <input type="checkbox" name="time_7" value="{$t.15}"></td>
+            <td></td>
+        </tr>
+
+    </table>
+		<center><input type="submit" value="提交" name="addjiaban" class="tianjia">
+        <input type="reset" class="add_cz"> </center>	
+    </form>
+    <span class="hongse">在此处设置加班信息，如果多天加班请重复操作设置！</span>
+    </foreach>
+    <table class="main_yy" cellpadding="0" cellspacing="0">
+    <tr>
+    	<td>编号</td>
+    	<td>加班日期</td>
+    	<td>加班时段</td>
+    	<td>操作</td>
+    </tr>
+    <foreach name="jiaban" item="j">
+    <tr>
+       <td>{$j.id}</td>
+       <td>{$j.addtime}</td>
+       <td>{$j.time_duan}</td>
+       <td><a href="/index.php/Teacher/jiaban_del/?id={$j.id}" onclick="return check()">取消</a></td>
+    </tr>
+    </foreach>
+    </table>
+    </div>
+    </div>
+</body>
+</html>

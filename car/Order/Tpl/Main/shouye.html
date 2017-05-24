@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>驾校在线约车系统</title>
+    <link rel="stylesheet" type="text/css" href="/Order/Public/Css/css.css">
+    <script type="text/javascript" src="/Order/Public/Js/jquery.js"></script>
+    <script type="text/javascript" src="/Order/Public/Js/function.js"></script>
+</head>
+
+<body>
+<div class="top">
+    <div class="top_l"></div>
+    <div class="top_m">
+        <div class="logo"><img src="/Order/Public/Images/logo.png" alt=""/></div>
+        <div class="caozuo">
+            <if condition="$usertype elt 2">
+                <a href="/index.php/Admin/log_list" target="main"><img src="/Order/Public/Images/main_12.gif" alt=""/></a>
+                <else/>
+                <a href="/index.php/Main/info" target="main"><img src="/Order/Public/Images/main_12.gif" alt=""/></a>
+            </if>
+            <a href="/index.php/Index/login_out"><img src="/Order/Public/Images/main_20.gif" alt=""/></a>
+            <span><img src="/Order/Public/Images/main_21.gif" alt=""/></span>
+            <if condition="$usertype eq 6">
+                <a href="/index.php/Main/password_edit" target="main"><img src="/Order/Public/Images/main_22.gif"
+                                                                             alt=""/></a>
+                <elseif condition="$usertype eq 5"/>
+                <a href="/index.php/Teacher/password_edit" target="main"><img src="/Order/Public/Images/main_22.gif"
+                                                                                alt=""/></a>
+            </if>
+        </div>
+        <div class="shijian"><span>当前用户：{$Think.session.user}</span> &nbsp; &nbsp;&nbsp;&nbsp;
+            <div id="linkweb">
+            </div>
+            <script>setInterval("linkweb.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());", 1000);
+            </script>
+        </div>
+    </div>
+    <div class="top_r"></div>
+</div>
+<div class="mid_top">
+    <div class="mid_top_l">{$Think.session.user}</div>
+    <div class="mid_top_m">
+        <if condition="$usertype eq 6">
+            <p>科目二学时：<span>{$student.xueshi_k2}</span> &nbsp;&nbsp;已预约：<span>{$kemuer}</span> &nbsp; &nbsp;科目三学时：<span>{$student.xueshi_k3}</span>
+                &nbsp; &nbsp;已预约：<span>{$kemusan}</span></p>
+            <elseif condition="$usertype eq 5"/>
+            今日预约：<span>{$jinriyy}</span>
+        </if>
+    </div>
+    <div class="mid_top_r"></div>
+</div>
+<div class="middle">
+    <!--usertype = 1 超级管理员-->
+    <!--usertype = 2 管理员-->
+    <!--usertype = 3 学员-->
+    <!--usertype = 5 教练-->
+    <if condition="$usertype elt 2">
+        <include file="/order/Tpl/Admin/left"/>
+        <elseif condition="$usertype eq 5"/>
+        <include file="/order/Tpl/Teacher/left"/>
+        <else/>
+        <include file="/order/Tpl/Main/left"/>
+    </if>
+    <span id="anniu_p"></span>
+    <div class="right">
+        <!--elt 小于等于2-->
+        <if condition="$usertype elt 2">
+            <IFRAME id="main" src="/index.php/Admin/log_list" frameBorder="0" name="main"></IFRAME>
+            <else/>
+            <!--操作系统,浏览器信息页面-->
+            <IFRAME id="main" src="/index.php/Main/info" frameBorder="0" name="main"></IFRAME>
+        </if>
+
+
+    </div>
+</div>
+</body>
+</html>

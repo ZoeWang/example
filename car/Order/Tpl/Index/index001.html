@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>网上约车系统-系统登录</title>
+<link rel="stylesheet" type="text/css" href="/Order/Public/Css/style.css">
+</head>
+<body class="login_body">
+      <div class="login_bg">
+         <div class="login_top_bg"></div>
+      <div class="login_m_bg">
+         <div class="login_form">
+         <table cellspacing="0" cellpadding="0">
+   	   <form method="post" action="/index.php/Index/login">
+         <tr>
+            <td>用户类型：</td>
+            <td><select name="usertype" style="width:60px;height:25px;padding-top:5px;">
+            <option value="student" >学员</option>
+            <option value="teacher">教练</option>
+            <option value="admin">管理</option>
+         </select> </td>
+         </tr>
+   	    <tr>
+           <td align="right">用户名：</td>
+           <td><input type="text" name="user" class="login_text"></td>  
+          </tr>
+          <tr>
+           <td align="right">密&nbsp; &nbsp;码：</td>
+           <td><input type="password" name="password" class="login_text"></td>  
+          </tr>
+   		<tr>
+        <td colspan="2">
+        <input type="submit" name="login"  class="but_dl" value=" " >
+         <input type="reset" class="but_cz" value=""></td>    
+         </tr>
+   	   </form>
+         </table>
+         </div>
+      </div>
+      <div class="login_end_bg"></div>
+      </div>
+      <div class="login_foot">
+        <span>版权所有：{$info.name} 2013-2020 All Rights Reserved</span><br/>
+    <span>联系人：{$info.linkman}   &nbsp; &nbsp; 联系电话：{$info.tel}</span><br/>
+    <span>地址：{$info.address}</span>
+      </div>
+</body>
+</html>

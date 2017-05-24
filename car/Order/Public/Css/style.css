@@ -1,0 +1,517 @@
+@CHARSET "UTF-8";
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-size: 12px;
+    font-family: "微软雅黑", "宋体";
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+select {
+    border: 1px solid #7EB0C7;
+}
+
+.login_body {
+    background: url(/Order/Public/Images/login_bg.jpg) center;
+}
+
+.login_bg {
+    width: 100%;
+    height: 560px;
+    margin: 50px auto;
+    margin-bottom: 20px;
+}
+
+.login_top_bg {
+    width: 1024px;
+    height: 150px;
+    background: url(/Order/Public/Images/login_top_bg.jpg) center bottom no-repeat;
+    margin: 0 auto;
+}
+
+.login_m_bg {
+    width: 1024px;
+    margin: 0 auto;
+    height: 276px;
+    background: url(/Order/Public/Images/login_middle_bg.jpg) center no-repeat;
+}
+
+.login_form {
+    float: right;
+    width: 300px;
+    height: 120px;
+    margin-top: 90px;
+    margin-right: 70px;
+    color: #fff;
+}
+
+.login_form table tr td {
+    height: 35px;
+}
+
+.login_foot {
+    text-align: center;
+    width: 1024px;
+    margin: 0 auto;
+    line-height: 30px;
+    font-weight: 800;
+}
+
+.but_dl {
+    width: 83px;
+    height: 34px;
+    background: url(/Order/Public/Images/denglu_but.jpg);
+    border: none;
+    margin-left: 65px;
+    float: left;
+}
+
+.but_cz {
+    width: 83px;
+    height: 34px;
+    background: url(/Order/Public/Images/chongzhi_but.jpg);
+    border: none;
+    margin-left: 20px;
+}
+
+.login_end_bg {
+    width: 1024px;
+    margin: 0 auto;
+    height: 135px;
+    background: url(/Order/Public/Images/login_end_bg.jpg) center top no-repeat;
+}
+
+.login_text {
+    width: 200px;
+    height: 25px;
+}
+
+.main_yy {
+    width: 98%;
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.main_yy td {
+    border: 1px solid #1983D1;
+    height: 30px;
+}
+
+.main_st {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.main_st td {
+    border: 1px solid #1983D1;
+    height: 30px;
+}
+
+.main_head {
+    height: 30px;
+    margin: 0 auto;
+    background: url(/Order/Public/Images/riqi_bg.jpg) repeat-x;
+    border-bottom: 4px solid #33A9D0;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.riqi li {
+    float: left;
+    line-height: 30px;
+    width: 100px;
+    margin-left: 2px;
+    border: 1px solid #166085;
+    border-bottom: none;
+    text-align: center;
+}
+
+.riqi li a {
+    font-weight: 600;
+    display: block;
+    width: 100px;
+    height: 30px;
+}
+
+.current {
+    background: #33A9D0;
+    color: #fff;
+}
+
+.middle {
+    border: 1px solid #25668C;
+    background: url(/Order/Public/Images/admin_biaodang_bg.jpg) center top no-repeat;
+    margin: 0 auto;
+    min-height: 500px;
+}
+
+.middle_list {
+    width: 1200px;
+    border: 1px solid #25668C;
+    margin: 0 auto;
+    min-height: 550px;
+    position: relative;
+}
+
+/*.middle_list{border: 1px solid #25668C;margin: 0 auto;min-height: 550px;position: relative;}*/
+.middle_info {
+    width: 400px;
+    height: 300px;
+}
+
+.head {
+    width: 100%;
+    overflow: hidden;
+    line-height: 25px;
+    height: 108px;
+    background: url(/Order/Public/Images/top_bg.jpg);
+}
+
+.logo {
+    height: 82px;
+    float: left;
+}
+
+.menu {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.menu ul li {
+    float: left;
+    width: 100px;
+    height: 22px;
+    background: url(/Order/Public/Images/menu_li_bg.jpg);
+    text-align: center;
+}
+
+.t_info {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.t_info td {
+    border: 1px solid #1291F6;
+    height: 30px;
+    line-height: 30px;
+}
+
+.hongse {
+    color: #f00;
+}
+
+.add {
+    margin: 10px auto;
+    width: 350px;
+    line-height: 30px;
+}
+
+.add_config {
+    margin: 10px auto;
+    width: 550px;
+    line-height: 30px;
+}
+
+.yeyue_list {
+    margin: 10px auto;
+    width: 650px;
+    line-height: 30px;
+}
+
+.add_tc {
+    margin-top: 10px;
+    width: 550px;
+    margin-left: 300px;
+    line-height: 30px;
+}
+
+.add, .add_config, .yuyue_list table tr td {
+    line-height: 35px;
+}
+
+.add_input1 {
+    width: 200px;
+    height: 25px;
+    border: 1px solid #7EB0C7;
+}
+
+.add_input2 {
+    width: 80px;
+    height: 25px;
+    border: 1px solid #7EB0C7;
+}
+
+.tianjia {
+    width: 51px;
+    height: 22px;
+    background: url(/Order/Public/Images/tianjia_but.jpg) center center no-repeat;
+    border: none;
+}
+
+.queding {
+    width: 51px;
+    height: 22px;
+    background: url(/Order/Public/Images/tianjia_but.jpg) center center no-repeat;
+    border: none;
+    margin-left: 10px;
+}
+
+.add_cz {
+    width: 51px;
+    height: 22px;
+    background: url(/Order/Public/Images/tianjia_but.jpg) center center no-repeat;
+    border: none;
+    margin-left: 20px;
+}
+
+.footer {
+    height: 60px;
+    text-align: center;
+    line-height: 30px;
+    background: url(/Order/Public/Images/footer_bg.jpg) left top repeat-x;
+}
+
+.add_title {
+    margin: 80px auto 0;
+    width: 300px;
+    height: 80px;
+    color: #1A9CD6;
+    line-height: 80px;
+    font-size: 36px;
+    text-align: center;
+}
+
+.info_title {
+    margin: 50px auto 0;
+    width: 300px;
+    height: 50px;
+    color: #1A9CD6;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.position {
+    height: 30px;
+    background: url(/Order/Public/Images/weizhi_bg.jpg) left top repeat-x;
+    line-height: 30px;
+}
+
+.position span {
+    padding-left: 35px;
+    background: url(/Order/Public/Images/tb.gif) left 15px center no-repeat;
+}
+
+.lvse {
+    background: #4DFF4D;
+    padding: 4px 15px;
+}
+
+.lanse {
+    background: #4DFFFF;
+    padding: 4px 15px;
+}
+
+.huangse {
+    background: #FFFF4D;
+    padding: 4px 4px;
+}
+
+.zise {
+    background: #D100D1;
+    padding: 4px 10px;
+}
+
+.main_td td {
+    width: 67px;
+}
+
+.main_title {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    color: #FF1414;
+}
+
+.mn21 a, .km22 a, .mn33 a, .km34 a {
+    color: #f00;
+    background: url(/Order/Public/Images/menu_li_hovbg.jpg) center top no-repeat;
+    display: block;
+}
+
+.message {
+    width: 1200px;
+    margin: 0 auto;
+    color: #f00;
+    line-height: 30px;
+}
+
+.top_info {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.student_info {
+    float: right;
+    width: 500px;
+}
+
+.xueshi {
+    color: #CC0000;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.chaxunlist {
+    width: 500px;
+    margin-left: 350px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.shuoming ul {
+    position: absolute;
+    bottom: 10px;
+    left: 200px;
+}
+
+.shuoming ul li {
+    float: left;
+    line-height: 30px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+.shuoming ul li img {
+    float: left;
+    margin-right: 10px;
+}
+
+.currents {
+    padding: 0px 5px;
+    border: 1px solid #f00;
+    background: #FF80FF;
+}
+
+.page {
+    color: #000;
+    font-size: 14px;
+}
+
+.page a {
+    margin-left: 5px;
+    padding: 0px 5px;
+    border: 1px solid #1983D1;
+}
+
+#self-intro {
+    width: 896px;
+    height: 373px;
+    position: fixed;
+    _position: absolute;
+    left: -800px;
+    top: 120px;
+    z-index: 9999;
+}
+
+#hb {
+    height: 373px;
+    width: 90px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background: url(/Order/Public/Images/lrtk.jpg) 0 -920px no-repeat; /*IE浏览器只识别有背景图片或背景色的绝对定位的区块*/
+}
+
+#self-intro .close {
+    width: 30px;
+    height: 30px;
+    background: url(/Order/Public/Images/closed.jpg) no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    display: none;
+}
+
+.message_bg {
+    width: 896px;
+    height: 373px;
+    background: url(/Order/Public/Images/zzsc.jpg) center top;
+}
+
+.message_content {
+    width: 700px;
+    height: 240px;
+    padding-top: 40px;
+    margin-left: 70px;
+    line-height: 25px;
+    overflow: hidden;
+}
+
+.main_yy a {
+    color: #0000F0;
+}
+
+.main_list {
+    width: 98%;
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.main_list td {
+    border: 1px solid #1983D1;
+    height: 30px;
+}
+
+.student_info p {
+    padding-top: 50px;
+    font-size: 14px;
+    color: #DEC569;
+}
+
+.student_info p span {
+    color: #FF1445;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.info_tab {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #B5D6E6;
+    color: #033D61;
+}
+
+.info_tab td {
+    border: 1px solid #B5D6E6;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+}
+
+.info_msg {
+    color: #000;
+    padding: 10px;
+}

@@ -1,0 +1,104 @@
+<div class="head">
+   <div class="top_info">
+   		<div class="logo"><img src="/Order/Public/Images/top_log.jpg" alt=""></div>
+   		<if condition="$usertype eq 6">
+     	<div class="student_info">
+     	<foreach name="student" item="t">
+     	<table>
+     		<tr>
+     			<td align="right" width="80px">用户姓名：</td>
+     			<td colspan="3">{$t.true_name}</td>
+     		</tr>
+     		<tr>
+     			<td align="right">电话号码：</td>
+     			<td width="200px">{$t.moble}</td>
+     			<td align="right">科目二学时：</td>
+     			<td> <span class="xueshi">{$t.xueshi_k2}</span> &nbsp; 已预约 &nbsp;<span class="xueshi">{$kemuer}</span></td>
+     		</tr>
+     		<tr>
+     			<td align="right">身 份 证：</td>
+     			<td>{$t.user_card}</td>
+     			<td align="right">科目三学时：</td>
+     			<td> <span class="xueshi">{$t.xueshi_k3}</span> &nbsp; 已预约 &nbsp;<span class="xueshi">{$kemusan}</span></td>
+     		</tr>
+     	</table>
+     	</foreach>
+     	</div>
+     	</if>
+     	<if condition="$usertype eq 5">
+     	<div class="student_info">
+     	<foreach name="jiaolian" item="t">
+     	<table>
+     		<tr>
+     			<td align="right" width="80px">用户姓名：</td>
+     			<td colspan="3">{$t.true_name}</td>
+     		</tr>
+     		<tr>
+     			<td align="right">电话号码：</td>
+     			<td width="200px">{$t.moble}</td>
+     			<td align="right">车 牌 号：</td>
+     			<td>{$t.carnum}</td>
+     		</tr>
+     		<tr>
+     			<td align="right">身 份 证：</td>
+     			<td>{$t.t_card}</td>
+     			<td>今日预约：</td>
+     			<td><span class="xueshi">{$jinriyy}</span></td>
+     		</tr>
+     	</table>
+     	</foreach>
+     	</div>  
+		</if>
+        <if condition="$usertype elt 2">
+            <div class="student_info">
+            <p>欢迎管理员 &nbsp;<span>{$Think.session.user}</span>   
+        &nbsp; &nbsp;<a href="/index.php/Admin/log_list">[登陆日志]</a> &nbsp; &nbsp;<a href="/index.php/Index/login_out">[退出登录]</a></p>
+            </div>
+        </if>
+
+   </div>
+   <div class="clear"></div>
+   <div class="menu">
+	<ul>
+	<if condition="$usertype eq 6">
+		<li class="mn2{$kemu}"><a href="/index.php/Main/?kmid=1">科目二模拟预约</a></li>
+		<li class="km2{$kemu}"><a href="/index.php/Main/?kmid=2">科目二实车预约</a></li>
+		<li class="mn3{$kemu}"><a href="/index.php/Main/?kmid=3">科目三模拟预约</a></li>
+		<li class="km3{$kemu}"><a href="/index.php/Main/?kmid=4">科目三实车预约</a></li>  
+		<li><a href="/index.php/Main/yuyueinfo">预约查询</a></li>
+		<li><a href="/index.php/Main/password_edit">个人信息修改</a></li>
+		<li><a href="/index.php/Index/login_out">安全退出</a></li>
+	<elseif condition="$usertype eq 5"/>
+		<li><a href="/index.php/Main/">系统主页</a></li>
+	    <li><a href="/index.php/Teacher/">设置加班</a></li>
+	    <li><a href="/index.php/Teacher/yuyueinfo">预约查询</a></li>
+	    <li><a href="/index.php/Teacher/password_edit">修改密码</a></li>
+		<li><a href="/index.php/Index/login_out">安全退出</a></li>
+	<else />
+	    <li><a href="/index.php/Main/">系统主页</a></li> 
+		<li><a href="/index.php/Admin/">学员添加</a></li>
+		<li><a href="/index.php/Admin/add_teacher">教练添加</a></li>
+		<li><a href="/index.php/Admin/student_list">学员列表</a></li>
+		<li><a href="/index.php/Admin/teacher_list">教练列表</a></li>
+        <li><a href="/index.php/Admin/get_student_yy">学员约车统计</a></li>
+		<li><a href="/index.php/Admin/get_teacher_yy">教练约车统计</a></li>
+    <li><a href="/index.php/Admin/show_date">系统设置</a></li>
+    <li><a href="/index.php/Admin/fangjia">放假设置</a></li>
+    <li><a href="/index.php/Admin/cominfo">公司信息</a></li>
+    <li><a href="/index.php/Admin/chongzhi_list">充值记录</a></li>
+	<li><a href="/index.php/Admin/password_edit">修改密码</a></li>		
+    </if>
+	</ul>
+	</div>
+</div>
+<if condition="$usertype egt 5">
+        <!--头部公告代码开始-->
+    <div id="self-intro">
+        <div id="hb"></div> 
+        <div class="message_bg">
+            <div class="message_content">{$message}</div>
+        </div>
+        <s class="close"></s>
+    </div>
+    <!--头部公告代码结束-->
+</if>
